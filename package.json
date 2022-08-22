@@ -1,0 +1,42 @@
+{
+  "name": "helios-cypress-tests",
+  "version": "1.0.0",
+  "description": "Cypress tests for Helios",
+  "main": "index.ts",
+  "scripts": {
+    "lint": "npm run lint:es && npm run lint:gherkin",
+    "lint:es": "eslint '**/*.ts'",
+    "lint:fix": "eslint '**/*.ts' --fix",
+    "lint:gherkin": "gherkin-lint '**/*.feature'",
+    "test:open": "./run-cypress.sh -o -c reporter=spec,numTestsKeptInMemory=10",
+    "test": "./run-cypress.sh -c reporter=spec",
+    "info": "npx cypress info"
+  },
+  "author": "Kevin Turner",
+  "dependencies": {
+    "@cypress/skip-test": "^2.6.1",
+    "@types/color": "3.0.3",
+    "@types/cypress-cucumber-preprocessor": "^4.0.0",
+    "@types/resolve": "^1.20.1",
+    "@typescript-eslint/eslint-plugin": "5.29.0",
+    "@typescript-eslint/parser": "5.29.0",
+    "color": "^3.2.1",
+    "cypress": "10.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "cypress-log-to-output": "^1.1.2",
+    "eslint": "^8.2.0",
+    "eslint-plugin-import-newlines": "^1.2.2",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "gherkin-lint": "^4.2.2",
+    "glob-parent": "^6.0.2",
+    "set-value": "^4.1.0",
+    "tsify": "^5.0.0",
+    "typescript": "^4.4.4",
+    "vue": "^2.6.3",
+    "vuex": "^3.1.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e"
+  }
+}

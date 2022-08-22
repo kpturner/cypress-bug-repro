@@ -1,0 +1,9 @@
+node_modules/
+cypress/videos/
+cypress/screenshots/
+._.DS_Store
+**/.DS_Store
+results/
+cypress.env.json
+.env
+__diff_output__
