@@ -18,6 +18,15 @@ export default (on: IEventCallback, config: Cypress.PluginConfigOptions): Cypres
 
     on('file:preprocessor', cucumber.default(options));
 
+    on('before:browser:launch', () => {
+        console.log('before:browser:launch first callback');
+    });
+
+    on('before:browser:launch', () => {
+        console.log('before:browser:launch second callback');
+    });
+
+
     console.log(`Running on ${os.platform()}`);
 
     return config;
