@@ -10,7 +10,9 @@
     "lint:gherkin": "gherkin-lint '**/*.feature'",
     "test:open": "./run-cypress.sh -o -c reporter=spec,numTestsKeptInMemory=10",
     "test": "./run-cypress.sh -c reporter=spec",
-    "info": "npx cypress info"
+    "info": "npx cypress info",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "author": "Kevin Turner",
   "dependencies": {

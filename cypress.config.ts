@@ -20,7 +20,7 @@ export default defineConfig({
         setupNodeEvents(on, config) {
             return plugins(on, config);
         },
-        baseUrl: 'http://localhost',
+        baseUrl: 'http://localhost:3000',
         excludeSpecPattern: [],
         specPattern: 'cypress/e2e/**/*.{feature,features}'
     }
